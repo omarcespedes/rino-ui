@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types'
 
 const TextField = ({
     value,
@@ -13,6 +14,13 @@ const TextField = ({
             <input {...rest} value={value} onChange={onChange} />
         </div>
     )
+}
+
+TextField.propTypes = {
+    value: PropTypes.string,
+    onChange: PropTypes.func,
+    label: PropTypes.string,
+    className: PropTypes.string,
 }
 
 export default TextField;
