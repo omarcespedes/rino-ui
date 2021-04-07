@@ -1,0 +1,57 @@
+.rino-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+    font-size: 1.4rem;
+
+    // SIZING STYLES
+    &.rino-button-size-sm {
+        height: 1.8rem;
+        padding: 0 0.6rem;
+        font-size: 1.2rem;
+    }
+    &.rino-button-size-md {
+        height: 2.4rem;
+        padding: 0 1.2rem;
+    }
+    &.rino-button-size-lg {
+        height: 3rem;
+        padding: 0 1.8rem;
+    }
+
+    // APPEARANCE STYLES
+    &.rino-button-appearance-filled {
+        &.primary {
+            background-color: $primary;
+        }
+        &.secondary {
+            background-color: $secondary;
+        }
+    }
+
+    &.rino-button-appearance-outlined {
+        background-color: white;
+        &.primary {
+            color: $primary;
+            border: 1px solid $primary;
+        }
+
+        &.secondary {
+            color: $secondary;
+            border: 1px solid $secondary;
+        }
+    }
+
+    &.rino-button-appearance-plain {
+        background-color: white;
+        &.primary {
+            color: $primary;
+        }
+
+        &.secondary {
+            color: $secondary;
+        }
+    }
+}

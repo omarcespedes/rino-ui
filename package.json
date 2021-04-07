@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/omarcespedes/rino-ui#readme",
   "dependencies": {
+    "classnames": "^2.3.1",
     "prop-types": "^15.7.2",
     "react": "^16.14.0",
     "react-dom": "^16.14.0"
@@ -28,11 +29,16 @@
     "@storybook/addon-actions": "^6.2.1",
     "@storybook/addon-essentials": "^6.2.1",
     "@storybook/addon-links": "^6.2.1",
+    "@storybook/preset-scss": "^1.0.3",
     "@storybook/react": "^6.2.1",
     "babel-loader": "^8.2.2",
+    "css-loader": "^5.2.0",
     "eslint": "^7.23.0",
     "eslint-config-prettier": "^8.1.0",
     "eslint-plugin-prettier": "^3.3.1",
-    "prettier": "^2.2.1"
+    "prettier": "^2.2.1",
+    "sass": "^1.32.8",
+    "sass-loader": "^10.1.1",
+    "style-loader": "^2.0.0"
   }
 }
