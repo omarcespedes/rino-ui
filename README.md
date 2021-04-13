@@ -8,3 +8,6 @@ A set of React components created for my projects
  - [ ] Quantity Field
  - [ ] Select
  - [ ] Select Option
+ - [ ] Navbar
+ - [ ] Modal
+ - [ ] Textarea
