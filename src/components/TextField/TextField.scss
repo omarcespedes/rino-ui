@@ -1,3 +1,41 @@
 .rino-text-field {
-    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 1rem;
+
+    &.inline {
+        flex-direction: row;
+
+        .rino-label {
+            padding-top: 0.5rem;
+        }
+
+        .input-container {
+            margin-top: 0;
+            margin-left: 0.8rem;
+        }
+    }
+
+    .input-container {
+        margin-top: 0.5rem;
+    }
+
+    .rino-input {
+        height: 2.2rem;
+        padding: 0 0.5rem;
+        font-size: 0.9rem;
+        font-family: inherit;
+
+        &.error {
+            color: $error;
+            border: 1px solid $error;
+        }
+    }
+
+    .input-error {
+        margin-top: 0.3rem;
+        font-size: 0.7rem;
+        color: $error;
+    }
 }

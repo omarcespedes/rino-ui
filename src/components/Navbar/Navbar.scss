@@ -6,10 +6,6 @@
 
     .hamburger-container {
         margin-right: 1rem;
-        > * {
-            cursor: pointer;
-            color: choose-contrast-color($primary);
-        }
     }
 
     .brand-container,

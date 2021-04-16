@@ -1,20 +1,32 @@
 import React from 'react';
-import classnames from 'classnames';
+import cn from 'classnames';
 
 const Button = ({
     children,
     size = 'md',
     appearance = 'filled',
-    color = 'primary'
+    color = 'primary',
+    icon,
+    className,
+    ...rest
 }) => {
     return (
         <button
-            className={classnames('rino-button', {
+            {...rest}
+            className={cn('rino-button', {
                 [`rino-button-size-${size}`]: true,
                 [`rino-button-appearance-${appearance}`]: true,
                 primary: color === 'primary',
                 secondary: color === 'secondary',
+                className
             })}>
+            {icon && (
+                <span className={cn({
+                    'icon-button-container': !!children
+                })}>
+                    {icon}
+                </span>
+            )}
             {children}
         </button>
     )

@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Button from './Button';
+import Icon from '../Icon/Icon';
 
 export default {
     title: 'UI Elements/Button',
@@ -47,4 +48,21 @@ PrimaryPlain.args = {
     color: 'primary',
     size: 'md',
     children: 'Button',
+};
+
+export const ButtonWithIcon = Template.bind({});
+ButtonWithIcon.args = {
+    appearance: 'filled',
+    color: 'primary',
+    size: 'md',
+    children: 'Button',
+    icon: <Icon icon="coffee" />,
+};
+
+export const IconOnly = Template.bind({});
+IconOnly.args = {
+    appearance: 'filled',
+    color: 'primary',
+    size: 'md',
+    icon: <Icon icon="coffee" />,
 };

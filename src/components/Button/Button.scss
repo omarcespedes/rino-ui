@@ -8,16 +8,16 @@
 
     // SIZING STYLES
     &.rino-button-size-sm {
-        height: 1.8rem;
+        height: 1.6rem;
         padding: 0 0.6rem;
         font-size: 0.8rem;
     }
     &.rino-button-size-md {
-        height: 2.4rem;
+        height: 2.2rem;
         padding: 0 1rem;
     }
     &.rino-button-size-lg {
-        height: 3rem;
+        height: 2.8rem;
         padding: 0 1.4rem;
         font-size: 1.2rem;
     }
@@ -57,5 +57,10 @@
         &.secondary {
             color: $secondary;
         }
+    }
+
+    // Icon styles
+    .icon-button-container {
+        padding-right: 0.5rem;
     }
 }

@@ -30,10 +30,9 @@ const Navbar = ({
         <nav className="rino-navbar">
             {isMobile && (
                 <>
-                    {/* add button with icon */}
-                    <div className="hamburger-container" onClick={() => setSideMenuOpen(prevVal => !prevVal)}>
-                        <Icon icon="bars" />
-                    </div>
+                    <Button
+                        icon={<Icon icon="bars" />}
+                        onClick={() => setSideMenuOpen(prevVal => !prevVal)} />
                     <SideMenu ref={sideMenuRef} isOpen={sideMenuOpen}>
                         {headerButtons}
                     </SideMenu>
