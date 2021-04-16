@@ -1,9 +1,17 @@
 // colors
 @import './colors.scss';
 
+// global
+@import './global.scss';
+
+// helpers
+@import './calculateContrast.scss';
+
 // font
 @import './font.scss';
 
 // Components
 @import '../components/Button/Button.scss';
+@import '../components/Navbar/Navbar.scss';
+@import '../components/SideMenu/SideMenu.scss';
 @import '../components/TextField/TextField.scss';

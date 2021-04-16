@@ -1,0 +1,42 @@
+.rino-navbar {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    background-color: $primary;
+
+    .hamburger-container {
+        margin-right: 1rem;
+        > * {
+            cursor: pointer;
+            color: choose-contrast-color($primary);
+        }
+    }
+
+    .brand-container,
+    .items-container {
+        display: flex;
+    }
+
+    .items-container {
+        justify-content: space-between;
+
+        .rino-button.rino-button-appearance-plain {
+            margin-left: 0.5rem;
+            color: choose-contrast-color($primary);
+        }
+    }
+
+    .brand-container {
+        flex: 1;
+        align-items: center;
+
+        .brand {
+            color: choose-contrast-color($primary);
+            font-size: 1.3rem;
+        }
+
+        .logo-container {
+            height: 1.6rem;
+        }
+    }
+}

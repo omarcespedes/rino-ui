@@ -1,0 +1,19 @@
+.rino-side-menu {
+    display: flex;
+    flex-direction: column;
+    background: $secondary;
+    height: 100vh;
+    text-align: left;
+    padding: 2rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.3s ease-in-out;
+
+    //closed initially
+    transform: translateX(-100%);
+
+    &.open {
+        transform: translateX(0);
+    }
+}
