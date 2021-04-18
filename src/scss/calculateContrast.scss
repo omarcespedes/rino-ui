@@ -113,3 +113,13 @@ $linear-channel-values: 0 0.0003035269835488375 0.000607053967097675
         @return $black;
     }
 }
+
+@function hover-color($color) {
+    $contrastColor: choose-contrast-color($color);
+
+    @if ($contrastColor == $black) {
+        @return darken($color, 10%);
+    } @else {
+        @return lighten($color, 10%);
+    }
+}

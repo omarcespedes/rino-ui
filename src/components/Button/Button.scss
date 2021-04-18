@@ -27,15 +27,21 @@
         &.primary {
             background-color: $primary;
             color: choose-contrast-color($primary);
+            &:hover {
+                background-color: hover-color($primary);
+            }
         }
         &.secondary {
             background-color: $secondary;
             color: choose-contrast-color($secondary);
+            &:hover {
+                background-color: hover-color($secondary);
+            }
         }
     }
 
     &.rino-button-appearance-outlined {
-        background-color: white;
+        background-color: $white;
         &.primary {
             color: $primary;
             border: 1px solid $primary;
