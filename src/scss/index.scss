@@ -6,6 +6,7 @@
 
 // helpers
 @import './calculateContrast.scss';
+@import './screenSizes.scss';
 
 // font
 @import './font.scss';
@@ -13,5 +14,6 @@
 // Components
 @import '../components/Button/Button.scss';
 @import '../components/Navbar/Navbar.scss';
+@import '../components/ContentContainer/ContentContainer.scss';
 @import '../components/SideMenu/SideMenu.scss';
 @import '../components/TextField/TextField.scss';
