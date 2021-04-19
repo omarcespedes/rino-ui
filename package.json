@@ -19,13 +19,17 @@
   },
   "homepage": "https://github.com/omarcespedes/rino-ui#readme",
   "dependencies": {
+    "@babel/runtime": "^7.0.0",
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
     "@fortawesome/react-fontawesome": "^0.1.14",
     "classnames": "^2.3.1",
+    "moment": "^2.18.1",
     "prop-types": "^15.7.2",
-    "react": "^16.14.0",
-    "react-dom": "^16.14.0"
+    "react": "^0.14||^15.5.4||^16.1.1",
+    "react-dates": "^21.8.0",
+    "react-dom": "^0.14||^15.5.4||^16.1.1",
+    "react-with-direction": "^1.3.1"
   },
   "devDependencies": {
     "@babel/core": "^7.13.14",
