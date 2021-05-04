@@ -15,7 +15,7 @@ const TextField = ({
     return (
         <div className={cn('rino-text-field', {
             'inline': isInline,
-            className
+            [className]: className
         })}>
             <label htmlFor={id} className="rino-label">{label}</label>
             <div className="input-container">

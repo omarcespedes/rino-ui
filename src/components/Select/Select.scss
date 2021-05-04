@@ -1,0 +1,7 @@
+.rino-select {
+    @include base-input;
+
+    .rino-input {
+        cursor: pointer;
+    }
+}
