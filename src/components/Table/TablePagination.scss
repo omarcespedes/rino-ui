@@ -1,0 +1,14 @@
+.rino-table-pagination {
+    .rino-pagination {
+        list-style: none;
+        display: flex;
+
+        li {
+            margin: 0 0.2rem;
+            .rino-button {
+                width: 1.625rem;
+                padding: 0 0.3rem;
+            }
+        }
+    }
+}

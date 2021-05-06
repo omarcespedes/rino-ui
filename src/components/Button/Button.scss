@@ -6,6 +6,11 @@
     font-size: 1rem;
     font-family: inherit;
 
+    &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+
     // SIZING STYLES
     &.rino-button-size-sm {
         height: 1.6rem;

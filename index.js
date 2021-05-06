@@ -8,6 +8,7 @@ import Select from './src/components/Select/Select';
 import SelectOption from './src/components/SelectOption/SelectOption';
 import SideMenu from './src/components/SideMenu/SideMenu';
 import Table from './src/components/Table/Table';
+import TableColumn from './src/components/Table/TableColumn';
 
 export {
     TextField,
@@ -20,4 +21,5 @@ export {
     SelectOption,
     SideMenu,
     Table,
+    TableColumn,
 };

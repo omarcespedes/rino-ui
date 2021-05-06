@@ -1,15 +1,32 @@
-import React from 'react';
+import React, { useState } from 'react';
 import cn from 'classnames';
+import TablePagination from './TablePagination';
 
-const Table = ({ children, data, className, type = 'normal', ...rest }) => {
-
+const Table = ({
+    children,
+    data,
+    className,
+    type = 'normal',
+    usePagination,
+    pageSize,
+    ...rest
+}) => {
+    const [page, setPage] = useState(1);
     const columns = React.Children.toArray(children);
 
     const headerRows = columns.map(column => <th className="rino-table-header" key={`header-${column.props.header}`}>{column.props.header}</th>)
 
     const isStripped = type === 'stripped';
+    let tableData = data;
 
-    const rows = data.map((dataItem, i) => {
+    if (usePagination) {
+        tableData = data.slice(
+            pageSize * (page - 1),
+            Math.min(data.length, pageSize * page)
+        );
+    }
+
+    const rows = tableData.map((dataItem, i) => {
         const { id } = dataItem;
 
         return (
@@ -38,16 +55,25 @@ const Table = ({ children, data, className, type = 'normal', ...rest }) => {
     })
 
     return (
-        <table className={cn('rino-table', { [className]: !!className })} {...rest}>
-            <thead>
-                <tr>
-                    {headerRows}
-                </tr>
-            </thead>
-            <tbody>
-                {rows}
-            </tbody>
-        </table>
+        <div className="rino-table-container">
+            <table className={cn('rino-table', { [className]: !!className })} {...rest}>
+                <thead>
+                    <tr>
+                        {headerRows}
+                    </tr>
+                </thead>
+                <tbody>
+                    {rows}
+                </tbody>
+            </table>
+            {usePagination && (
+                <TablePagination
+                    total={data.length}
+                    pageSize={pageSize}
+                    page={page}
+                    onPageChange={setPage} />
+            )}
+        </div>
     )
 }
 

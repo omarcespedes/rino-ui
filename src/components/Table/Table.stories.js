@@ -2,6 +2,7 @@ import React from 'react';
 
 import Table from './Table';
 import TableColumn from './TableColumn';
+import { DataForTablePagination } from './TableDataStorybook';
 
 export default {
     title: 'UI Elements/Table',
@@ -51,4 +52,12 @@ TableStripped.args = {
     className: 'test',
     data: tableData,
     type: 'stripped',
+};
+
+export const TableWithPagination = Template.bind({});
+TableWithPagination.args = {
+    className: 'test',
+    usePagination: true,
+    data: DataForTablePagination,
+    pageSize: 3,
 };

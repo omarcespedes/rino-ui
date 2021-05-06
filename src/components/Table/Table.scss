@@ -1,19 +1,21 @@
-.rino-table {
-    border-collapse: collapse;
+.rino-table-container {
+    .rino-table {
+        border-collapse: collapse;
 
-    .rino-table-header {
-        border-bottom: 1px solid $primary;
-    }
-
-    .rino-table-row {
-        &.even {
-            background-color: lighten($primary, 10%);
-            color: choose-contrast-color(lighten($primary, 10%));
+        .rino-table-header {
+            border-bottom: 1px solid $primary;
         }
-    }
 
-    .rino-table-header,
-    .rino-table-cell {
-        padding: 0.9rem;
+        .rino-table-row {
+            &.even {
+                background-color: lighten($primary, 10%);
+                color: choose-contrast-color(lighten($primary, 10%));
+            }
+        }
+
+        .rino-table-header,
+        .rino-table-cell {
+            padding: 0.9rem;
+        }
     }
 }

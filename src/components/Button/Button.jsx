@@ -6,6 +6,7 @@ const Button = ({
     size = 'md',
     appearance = 'filled',
     color = 'primary',
+    isDisabled,
     icon,
     className,
     ...rest
@@ -13,6 +14,7 @@ const Button = ({
     return (
         <button
             {...rest}
+            disabled={isDisabled}
             className={cn('rino-button', {
                 [`rino-button-size-${size}`]: true,
                 [`rino-button-appearance-${appearance}`]: true,
