@@ -1,3 +1,4 @@
+import '../src/scss/colors.scss';
 import '../src/scss/index.scss';
 
 export const parameters = {
