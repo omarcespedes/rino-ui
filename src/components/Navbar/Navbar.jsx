@@ -5,7 +5,7 @@ import Button from '../Button/Button'
 import Icon from '../Icon/Icon'
 import SideMenu from '../SideMenu/SideMenu'
 
-const Navbar = ({
+const NavBar = ({
     brand,
     brandLogo,
     headerItems = []
@@ -57,4 +57,4 @@ const Navbar = ({
     )
 }
 
-export default Navbar;
+export default NavBar;
