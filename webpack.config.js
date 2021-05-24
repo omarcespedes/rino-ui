@@ -1,64 +1,37 @@
-const path = require('path');
-
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+// webpack.config.js
+var path = require('path');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
-    // Where files should be sent once they are bundled
+    entry: './index.js',
     output: {
-        path: path.join(__dirname, '/dist'),
+        path: path.resolve(__dirname, 'dist'),
         filename: 'index.bundle.js',
+        libraryTarget: 'commonjs2',
     },
-
-    entry: path.resolve(__dirname, 'index.js'),
-
-    resolve: {
-        extensions: ['*', '.js', '.jsx'],
-    },
-
-    // Rules of how webpack will take our files, complie & bundle them for the browser
     module: {
         rules: [
             {
                 test: /\.(js|jsx)$/,
-                exclude: /nodeModules/,
+                include: path.resolve(__dirname, 'src'),
+                exclude: /(node_modules|bower_components|build)/,
                 use: {
                     loader: 'babel-loader',
+                    options: {
+                        presets: ['@babel/preset-env', '@babel/preset-react'],
+                    },
                 },
             },
             {
-                test: /\.css$/,
-                use: ['style-loader', 'css-loader'],
-            },
-            {
-                test: /\.(sass|scss)$/,
-                // include: cssModulesLocationPattern,
-                use: [
-                    {
-                        loader: MiniCssExtractPlugin.loader,
-                        options: {
-                            // you can specify a publicPath here
-                            // by default it use publicPath in webpackOptions.output
-                            publicPath: '/',
-                        },
-                    },
-                    {
-                        loader: 'css-loader',
-                        options: {
-                            importLoaders: 2,
-                            modules: {
-                                localIdentName:
-                                    '[name]-[local]--[hash:base64:5]',
-                            },
-                        },
-                    },
-                    // {
-                    //     loader: 'postcss-loader',
-                    //     options: postcssOptions,
-                    // },
-                    'sass-loader',
-                ],
+                test: /\.*css$/,
+                use: ExtractTextPlugin.extract({
+                    fallback: 'style-loader',
+                    use: ['css-loader', 'sass-loader'],
+                }),
             },
         ],
     },
-    plugins: [],
+    externals: {
+        react: 'commonjs react',
+    },
 };
