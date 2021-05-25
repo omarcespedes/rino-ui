@@ -15,10 +15,6 @@
   },
   "author": "Omar Cespedes",
   "license": "MIT",
-  "files": [
-    "dist",
-    "src/scss"
-  ],
   "bugs": {
     "url": "https://github.com/omarcespedes/rino-ui/issues"
   },
