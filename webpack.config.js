@@ -9,6 +9,9 @@ module.exports = {
         filename: 'index.bundle.js',
         libraryTarget: 'commonjs2',
     },
+    resolve: {
+        extensions: ['*', '.js', '.jsx'],
+    },
     module: {
         rules: [
             {
