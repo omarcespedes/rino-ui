@@ -24,8 +24,8 @@
   },
   "homepage": "https://github.com/omarcespedes/rino-ui#readme",
   "peerDependencies": {
-    "react": "^16.14.0",
-    "react-dom": "^16.14.0"
+    "react": "^16.1.1",
+    "react-dom": "^16.1.1"
   },
   "dependencies": {
     "@babel/runtime": "^7.0.0",
@@ -61,6 +61,8 @@
     "file-loader": "^6.2.0",
     "mini-css-extract-plugin": "^1.6.0",
     "prettier": "^2.2.1",
+    "react": "^16.1.1",
+    "react-dom": "^16.1.1",
     "sass": "^1.32.8",
     "sass-loader": "^10.1.1",
     "style-loader": "^2.0.0",
