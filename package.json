@@ -1,6 +1,6 @@
 {
   "name": "rino-ui",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Set of components for RinoScript",
   "main": "dist/index.bundle.js",
   "scripts": {
