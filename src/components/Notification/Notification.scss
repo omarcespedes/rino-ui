@@ -1,0 +1,63 @@
+.rino-notification {
+    display: flex;
+    border-radius: 10px;
+    padding: 0.5rem;
+    border-width: 3px;
+    border-style: solid;
+    position: relative;
+    background-color: white;
+
+    &.info {
+        border-color: $info;
+        .notification-title,
+        .notification-icon {
+            color: $info;
+        }
+    }
+    &.error {
+        border-color: $error;
+        .notification-title,
+        .notification-icon {
+            color: $error;
+        }
+    }
+    &.warning {
+        border-color: $warning;
+        .notification-title,
+        .notification-icon {
+            color: $warning;
+        }
+    }
+    &.success {
+        border-color: $success;
+        .notification-title,
+        .notification-icon {
+            color: $success;
+        }
+    }
+
+    .notification-content {
+        padding-left: 1rem;
+    }
+
+    .notification-title {
+        margin-top: 0;
+        margin-bottom: 0.5rem;
+        font-size: 1rem;
+    }
+
+    .close-icon {
+        position: absolute;
+        right: 16px;
+        top: 10px;
+        cursor: pointer;
+    }
+
+    .icon-container {
+        min-width: 36px;
+        svg {
+            display: block;
+            margin: 0 auto;
+        }
+    }
+}
