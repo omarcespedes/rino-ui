@@ -10,6 +10,7 @@ import SideMenu from './src/components/SideMenu/SideMenu';
 import Notification from './src/components/Notification/Notification';
 import Table from './src/components/Table/Table';
 import TableColumn from './src/components/Table/TableColumn';
+import Checkbox from './src/components/Checkbox/Checkbox';
 import TablePagination from './src/components/Table/TablePagination';
 
 export {
@@ -25,5 +26,6 @@ export {
     Table,
     TableColumn,
     TablePagination,
-    Notification
+    Notification,
+    Checkbox
 };
